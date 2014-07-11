@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hypernode.sshmediaplayer" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pi_audioplayer_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hypernode.sshmediaplayer.MainActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:label="Pi Audio Player" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hypernode.sshmediaplayer.SetPreferenceActivity"
+             android:label="Pi Audio Player- Preferences" >
+
+        </activity>
+        <receiver android:name="com.hypernode.sshmediaplayer.YoutubeReceiver" >
+
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/network_settings">
+
+        <EditTextPreference
+            android:key="@string/remote_host_ip"
+            android:title="@string/remote_host_ip"
+            android:summary="IP of SSH-Server"
+            android:dialogTitle="Give an IP!" />
+
+        <EditTextPreference
+            android:key="@string/remote_host_port"
+            android:title="@string/remote_host_port"
+            android:summary="Used Port of SSH-Server"
+            android:dialogTitle="Give a Port!"
+            android:inputType="numberDecimal"/>
+
+        <EditTextPreference
+            android:key="@string/ssl_username"
+            android:title="@string/ssl_username"
+            android:summary="SSL Username on Remote Host"
+            android:dialogTitle="Give a Username!" />
+
+        <EditTextPreference
+            android:key="@string/ssl_password"
+            android:title="@string/ssl_password"
+            android:summary="SSL Password on Remote Host"
+            android:dialogTitle="Give a Password!"
+            android:inputType="textPassword" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/application_settings">
+
+        <EditTextPreference
+            android:key="@string/status_refresh_rate"
+            android:title="@string/status_refresh_rate"
+            android:summary="Status Refresh Rate in ms"
+            android:dialogTitle="Give a time in ms!"
+            android:inputType="numberDecimal" />
+
+        <CheckBoxPreference
+            android:key="@string/get_status"
+            android:title="@string/get_status"
+            android:summary="Toggle Status Updates" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.hypernode.sshmediaplayer.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/relLayout_seeker"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seek to"
+            android:id="@+id/textView_seekto"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <SeekBar
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView_seekto"
+            android:id="@+id/seekBar_position"
+            android:max="100"
+            android:progress="1" />
+
+        <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:id="@+id/textView_percent"
+            android:layout_toRightOf="@id/seekBar_position"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:text="No Status Yet"
+        android:id="@+id/textView_status"
+        android:background="@color/black"
+        android:scrollbars = "vertical"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/relLayout_seeker" />
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/textView_status"
+        android:background="@drawable/indicator_code_lock_point_area_default"
+        android:id="@+id/view_onlineStatus"
+        />
+    <RelativeLayout
+        android:layout_below="@+id/textView_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout_controls">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:id="@+id/tv_output"
+         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_media_play"
+
+        android:id="@+id/button_play"
+        android:layout_alignTop="@+id/button_next"
+        android:layout_toRightOf="@+id/button_next" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_media_next"
+
+        android:id="@+id/button_next"
+        android:layout_alignTop="@+id/button_previous"
+        android:layout_toRightOf="@+id/button_previous" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_media_previous"
+
+        android:id="@+id/button_previous"
+        android:layout_below="@+id/tv_output"
+        android:layout_toRightOf="@+id/tv_output" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_media_pause"
+        android:id="@+id/button_pause"
+        android:layout_alignTop="@+id/button_play"
+        android:layout_toRightOf="@+id/button_play"
+        android:layout_alignBottom="@+id/button_play" />
+
+    <!-- Dummy item to prevent EditTExtLink from receiving focus -->
+    <LinearLayout
+            android:focusable="true" android:focusableInTouchMode="true"
+            android:layout_width="0px" android:layout_height="0px"/>
+    <EditText
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_link"
+        android:hint="Paste link here"
+        android:nextFocusUp="@id/editText_link"
+        android:nextFocusLeft="@id/editText_link"
+        android:singleLine="true"
+        android:layout_below="@+id/button_play"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_add"
+
+        android:id="@+id/button_add"
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/editText_link"
+        android:layout_toRightOf="@+id/editText_link" />
+    </RelativeLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_titles"
+        android:layout_below="@+id/relLayout_controls"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+
+
+
+
+
+</RelativeLayout>
