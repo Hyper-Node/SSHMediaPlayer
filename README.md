@@ -10,7 +10,7 @@ App which connects from Android to Raspberry Pi (or any another Linux device) to
 
 At the first start the settings pop up. It's mandatory to give the correct ip and ssh-Port of your Raspberry Pi in the network then. Be sure to add username and password if you configured your SSH to use this.
 
-Features:
+Features:asdasd
 - Adding music streams and mp3 by pasting a weblink to playlist
 - SSH connection to Raspberry Pi
 - Volume control with Smartphone audio buttons
