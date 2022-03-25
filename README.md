@@ -8,7 +8,7 @@ https://github.com/Hyper-Node/SSHMediaPlayer
 Description:
 App which connects from Android to Raspberry Pi (or any another Linux device) to play music. Music is played with mpc (which is a command line media player for linux) on Raspberry. The connection to the Raspberry is made with SSH (Secure Shell).  The Smartphone works as a controller which sends weblinks to the RaspBerry Pi, the weblinks are added to a playlist and played from the internet on the pi.
 
-At the first start the settings pop up. It's mandatory to give the correct ip and ssh-Port of your Raspberry Pi in the network then. Be sure to add username and password if you configured your SSH to use this.
+At the first start the settings pop up. It is mandatory to give the correct ip and ssh-Port of your Raspberry Pi in the network then. Be sure to add username and password if you configured your SSH to use this.
 
 Features:
 - Adding music streams and mp3 by pasting a weblink to playlist
